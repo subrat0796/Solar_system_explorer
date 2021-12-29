@@ -8,6 +8,8 @@ const plannetData = [
     day: "~600 hours",
     year: "0 days",
     className: "card--sun",
+    funfact:
+      "The Sun could fit 1.3 billion Earths inside it, but is hardly as large as the biggest stars present in the Universe. So, the Sun is huge,but tiny.",
   },
   {
     planetName: "Mercury",
@@ -15,6 +17,7 @@ const plannetData = [
     day: "1,407 hours",
     year: "88 days",
     className: "card--mercury",
+    funfact: "Your weight on Mercury would be 38% your weight on Earth.",
   },
   {
     planetName: "Venus",
@@ -22,6 +25,8 @@ const plannetData = [
     day: "5,832 hours",
     year: "224.7 days",
     className: "card--venus",
+    funfact:
+      "A day in Venus is longer than a year on Earth, and the second brightest natural object in the night sky after the Moon.",
   },
   {
     planetName: "Earth",
@@ -29,6 +34,8 @@ const plannetData = [
     day: "23.9 hours",
     year: "365.2 days",
     className: "card--earth",
+    funfact:
+      "Earth is the only planet in our Solar System not named after a God.",
   },
   {
     planetName: "Mars",
@@ -36,6 +43,8 @@ const plannetData = [
     day: "24.6 hours",
     year: "687 days",
     className: "card--mars",
+    funfact:
+      "On Mars, the Sun appears about half the size as it does on Earth.",
   },
   {
     planetName: "Jupiter",
@@ -43,6 +52,7 @@ const plannetData = [
     day: "9.9 hours",
     year: "4,331 days",
     className: "card--jupiter",
+    funfact: "Jupiter is the fastest spinning planet in the Solar System.",
   },
   {
     planetName: "Saturn",
@@ -50,6 +60,7 @@ const plannetData = [
     day: "10.7 hours",
     year: "10,747 days",
     className: "card--saturn",
+    funfact: "Saturn could float on water since it is mostly made of gas.",
   },
   {
     planetName: "Uranus",
@@ -57,6 +68,7 @@ const plannetData = [
     day: "17.2 hours",
     year: "30,589 days",
     className: "card--uranus",
+    funfact: "Uranus orbits the Sun on its side instead of around it.",
   },
   {
     planetName: "Neptune",
@@ -64,6 +76,8 @@ const plannetData = [
     day: "16.1 hours",
     year: "59,800 days",
     className: "card--neptune",
+    funfact:
+      "The astronomers and physicists have suspected for nearly 40 years that it rains diamonds in Neptune.",
   },
   {
     planetName: "Pluto",
@@ -71,6 +85,8 @@ const plannetData = [
     day: "153.3 hours",
     year: "90,560 days",
     className: "card--pluto",
+    funfact:
+      "There is a dark pole present on Pluto's moon,Charon but this dark pole is actually red in color!",
   },
 ];
 
@@ -79,6 +95,7 @@ const infoDegree = document.querySelector(".info__degree");
 const infoHours = document.querySelector(".info__hours");
 const infoDays = document.querySelector(".info__days");
 const cards = document.querySelector(".card");
+const planetFunFact = document.querySelector(".funfact__content__main");
 const body = document.body;
 
 let i = -1;
@@ -104,6 +121,7 @@ function nextPlanet() {
   infoDegree.textContent = `${plannetData[i].tilt}`;
   infoHours.textContent = `${plannetData[i].day}`;
   infoDays.textContent = `${plannetData[i].year}`;
+  planetFunFact.textContent = `${plannetData[i].funfact}`;
 }
 
 // preious planet function
@@ -127,6 +145,7 @@ function previousPlanet() {
   infoDegree.textContent = `${plannetData[i].tilt}`;
   infoHours.textContent = `${plannetData[i].day}`;
   infoDays.textContent = `${plannetData[i].year}`;
+  plannetData.textContent = `${plannetData[i].funfact}`;
 }
 
 nextPlanet();
